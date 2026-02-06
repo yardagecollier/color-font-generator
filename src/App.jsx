@@ -132,8 +132,8 @@ function App() {
     <div className="min-h-screen flex flex-col font-sans bg-off-white text-deep-graphite">
       {/* Toast Notification */}
       <div className={clsx(
-        "fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-2 rounded-full bg-deep-graphite text-off-white shadow-lg transition-all duration-300 pointer-events-none",
-        toast ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+        "fixed bottom-24 left-1/2 transform -translate-x-1/2 z-[60] px-6 py-2 rounded-full bg-deep-graphite text-off-white shadow-lg transition-all duration-300 pointer-events-none",
+        toast ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       )}>
         <span className="text-sm font-medium font-mono border-l-2 border-green-400 pl-2">{toast}</span>
       </div>
@@ -176,7 +176,7 @@ function App() {
       <div className="flex flex-col flex-grow pt-24 pb-12 px-4 sm:px-8 max-w-7xl mx-auto w-full gap-8 sm:gap-12">
         
         {/* Colors Section */}
-        <section className="w-full flex-grow flex flex-col sm:flex-row rounded-2xl overflow-hidden shadow-2xl shadow-black/5 aspect-[4/5] sm:aspect-[16/9]">
+        <section className="w-full flex-grow flex flex-col sm:flex-row rounded-2xl overflow-hidden shadow-2xl shadow-black/5 min-h-[600px] sm:min-h-0 sm:aspect-[16/9]">
             {palette.map((color, index) => {
               const textColor = getBestTextColor(color.hex);
               const contrastRatio = isAccessible(color.hex, textColor);
