@@ -206,9 +206,10 @@ function App() {
                       onClick={() => toggleLock(index)}
                       className={clsx(
                         "mt-4 p-2 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all",
-                         color.locked ? "opacity-100" : "opacity-0 group-hover:opacity-100 sm:opacity-0" // Always confirm lock visibility on mobile? No, let's keep it clean
+                         color.locked ? "opacity-100 ring-2 ring-white/50" : "opacity-40 hover:opacity-100" 
                       )}
-                      aria-label="Lock color"
+                      aria-label={color.locked ? "Unlock color" : "Lock color"}
+                      title={color.locked ? "Unlock color" : "Lock color"}
                     >
                       {color.locked ? <Lock size={16} /> : <Unlock size={16} />}
                     </button>
